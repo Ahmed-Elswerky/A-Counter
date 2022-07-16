@@ -1,0 +1,110 @@
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="google-site-verification"
+    content="RNanOCoLH4zAVBZTZ4tUygh9ZkubhRlUDx7SdQtLVFg"
+  />
+  <style>
+    @keyframes clock {
+      0% {
+        transform: scale(0.3) rotate(360deg);
+      }
+
+      50% {
+        transform: scale(1.5) rotate(0deg);
+      }
+    }
+
+    @keyframes clock1 {
+      0% {
+        color: #6f67d6;
+      }
+
+      20% {
+        color: #73a8d6;
+      }
+
+      30% {
+        color: #73d6b7;
+      }
+
+      40% {
+        color: #afd673;
+      }
+
+      50% {
+        color: #e09865;
+      }
+
+      60% {
+        color: #e06565;
+      }
+
+      70% {
+        color: #e06597;
+      }
+
+      80% {
+        color: #b265e0;
+      }
+    }
+
+    @keyframes sign {
+      0% {
+        filter: hue-rotate(360deg);
+      }
+
+      100% {
+        filter: hue-rotate(-360deg);
+      }
+    }
+
+    #back {
+      position: absolute;
+      color: white;
+      font-size: 1rem;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body
+  style="
+display: flex;
+justify-content: center;
+height: 100%;
+width: 100%;
+overflow: hidden;
+align-items: center;
+
+background:black;
+"
+>
+  <div id="back" style="animation:sign 5s ease-out infinite">
+    <img
+      src="sign.png"
+      draggable="false"
+      style="height:100%;width:100%;filter:invert(1)"
+    />
+  </div>
+  <div
+    id="div"
+    style="
+        font-size: 6rem;
+        font-weight: bolder;
+        text-align:center;
+        font-family: fantasy;animation:clock 7s ease-out infinite,clock1 5s ease-in infinite;
+        "
+  >
+    <small style="font-size:2rem;">Days : Hours : Minutes : Seconds</small
+    ><br />00 : 00 : 00 : 00<br /><small
+      style="font-size:0.9rem;font-weight:normal;font-style:italic;float:right"
+      >Ahmed Elswerky</small
+    >
+  </div>
+
+  <script src="./js.js" type="text/javascript"></script>
+</body>
